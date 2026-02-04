@@ -8,5 +8,5 @@ run: $(DEPS)
 clean: $(DEPS)
 	 rm $(DEPS)
 
-time: $(DEPS)
-	time ./$(DEPS)	$(var)
+mesure: $(DEPS)
+	 time ./$(DEPS)  $(var)

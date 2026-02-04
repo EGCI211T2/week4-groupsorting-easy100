@@ -25,13 +25,13 @@ int main(int argc, char** argv) {
     display(a, N);
 
     if(strcmp(argv[1], "bubble") == 0){
-        bubblesort(a, N);
+        bubbleSort(a, N);
     }
     else if(strcmp(argv[1], "selection") == 0){
-        selectionsort(a, N);
+        selectionSort(a, N);
     }
-    else if(strcmp(argv[1], "insertion") == 0){
-        insertionsort(a, N);
+    else if(strcmp(argv[1], "insert") == 0){
+        insertion(a, N);
     }
     else{
         cout << "Unknown sorting type: " << argv[1] << endl;

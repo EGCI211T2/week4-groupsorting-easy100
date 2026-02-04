@@ -36,27 +36,40 @@ void selectionSort(int a[], int n)
 } 
 
 
-
+/*
 void insertion(int a[],int n){
-<<<<<<< HEAD
 int i,j,new_number;
 
 for(j=1; j<n; j++){
-  cout<<"==Round"<<j<<"inseting"<< a[j]<<endl;
+  cout<<"==Round"<<j<<"inserting"<< a[j]<<endl;
   new_number =a[j];
-  for(i=m-1; i>=0; i--){
+  for(i=n-1; i>=0; i--){
     if(new_number <a[i]) a[i+1] = a[i];
     else break;
 
   }
-  display(a,N)
+  display(a,n);
   a[i+1] = new_number;
 
 }
 
-=======
-  
->>>>>>> refs/remotes/origin/master
+}*/
+
+void insertion(int arr[], int n)
+{
+    for (int i = 1; i < n; ++i) {
+        int key = arr[i];
+        int j = i - 1;
+
+        /* Move elements of arr[0..i-1], that are
+           greater than key, to one position ahead
+           of their current position */
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
 }
 
 void swap(int &a,int &b){
@@ -67,18 +80,16 @@ void swap(int &a,int &b){
 }
 
 void bubbleSort(int a[],int n){
-    cout<<"Before bubble sort: ";
+    //cout<<"Before bubble sort: ";
     int i,j;
     int sorted;
-    // how many pair to compare?
-    for(j=1;j<n;j++){
+    for(i=0;i<n;i++){
     	for(int j = 0; j < i; j++){
           if(a[i] < a[j]){
               swap(a[i], a[j]);
           }
       }
-      //display(a,n);
     }
-    cout<<"After bubble sort: ";
+    //cout<<"After bubble sort: ";
 }
 #endif
