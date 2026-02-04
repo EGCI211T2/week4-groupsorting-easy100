@@ -1,9 +1,12 @@
-
+DEPS= sort
 compile: main.cpp
-	 gcc  main.c -o sort
+	 g++ main.cpp -o $(DEPS)
 
-run: sort
-	 ./sort
+run: $(DEPS)
+	 ./$(DEPS)  $(var)
 
-clean: sort
-	 rm sort
+clean: $(DEPS)
+	 rm $(DEPS)
+
+time: $(DEPS)
+	time ./$(DEPS)	$(var)

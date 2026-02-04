@@ -6,6 +6,7 @@ using namespace std;
 #include "sorting.h"
 
 int main(int argc, char**argv) {
+<<<<<<< HEAD
   if (argc < 3)
     cout << "Usage : " << argc[0] << " <sorting_type <num1> <num2> ..." << endl;
     return 1;
@@ -42,6 +43,29 @@ int main(int argc, char**argv) {
   delete[] a;
   return 0;
 
+=======
+  int *a,N;
+  cout<<"argc = "<<argc<<endl;
+  if (argc <= 2){
+    cout<<"Not enough arguments"<<endl;
+    return 0;
+  }
+  for(int i = 2; i < argc; i++){
+    cout<<"argv[" << i<<"] : " <<argv[i]<<endl;
+    a[i-2] = atoi(argv[i]);
+  }
+  N = argc - 2;
+  display(a,N);
+
+  if(argc>1){
+       if(argv[1] =="bubble") bubbleSort(a,N); 
+       else if(argv[1] =="insertion") insertion(a,N); 
+       else if(argv[1] =="selection") selectionSort(a,N);
+    
+       //display(a,N);
+      }
+ return 0;
+>>>>>>> refs/remotes/origin/master
 }
 
 
