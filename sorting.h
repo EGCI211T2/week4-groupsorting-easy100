@@ -28,7 +28,20 @@ void selectionSort(int data[], int length)
 
 
 void insertion(int a[],int n){
+int i,j,new_number;
 
+for(j=1; j<n; j++){
+  cout<<"==Round"<<j<<"inseting"<< a[j]<<endl;
+  new_number =a[j];
+  for(i=m-1; i>=0; i--){
+    if(new_number <a[i]) a[i+1] = a[i];
+    else break;
+
+  }
+  display(a,N)
+  a[i+1] = new_number;
+
+}
 
 }
 
