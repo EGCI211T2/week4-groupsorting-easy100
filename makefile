@@ -7,6 +7,3 @@ run: $(DEPS)
 
 clean: $(DEPS)
 	 rm $(DEPS)
-
-mesure: $(DEPS)
-	 time ./$(DEPS)  $(var)
