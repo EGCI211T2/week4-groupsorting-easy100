@@ -10,8 +10,7 @@ using namespace std;
 
 void display(int a[],int n){
     for(int i = 0; i < n; ++i){
-        if(i) cout << " ";
-        cout << a[i];
+        cout << setw(5) << a[i];
     }
     cout << endl;
   
@@ -28,7 +27,6 @@ void selectionSort(int a[], int n)
             }
         }
         swap(a[j], a[mi]);
-        cout << "Round " << (j+1) << ": ";
         display(a, n);
     }
 } 
@@ -64,7 +62,6 @@ void insertion(int arr[], int n)
             j = j - 1;
         }
         arr[j + 1] = key;
-        cout << "Round " << i << ": ";
         display(arr, n);
     }
 }
@@ -83,8 +80,8 @@ void bubbleSort(int a[],int n){
                 swap(a[j], a[j+1]);
             }
         }
-        cout << "Round " << (i+1) << ": ";
         display(a, n);
+    
     }
 }
 #endif
