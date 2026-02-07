@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
         a[i] = atoi(argv[i+2]);
     }
 
-    cout << "Before sorting: ";
+    cout << "Before sorting:" << endl;
     display(a, N);
 
     if(strcmp(argv[1], "bubble") == 0){
@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    cout << "After sorting: ";
+    cout << "After sorting:" << endl;
     display(a, N);
 
     delete[] a;
