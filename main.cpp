@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     else if(strcmp(argv[1], "selection") == 0){
         selectionSort(a, N);
     }
-    else if(strcmp(argv[1], "insert") == 0){
+    else if(strcmp(argv[1], "insert") == 0 || strcmp(argv[1], "insertion") == 0){
         insertion(a, N);
     }
     else{

@@ -1,6 +1,7 @@
 #ifndef SORTING_H
 #define SORTING_H
 
+#include <iostream>
 #include <iomanip>
 
 using namespace std;
@@ -8,19 +9,17 @@ using namespace std;
 
 
 void display(int a[],int n){
-    int i;
-    for(i=0;i<n;i++)
-        std::cout<<setw(3)<<a[i];
-	  std::cout<<std::endl;
+    for(int i = 0; i < n; ++i){
+        if(i) cout << " ";
+        cout << a[i];
+    }
+    cout << endl;
   
 }
 
 void selectionSort(int a[], int n) 
-{ 
-	  int i, j, m, mi; 
-    cout<<"Before selection sort: ";
-    display(a,n);
-    mi = 0;
+{
+    int i, mi;
     for(int j = 0; j < n-1; j++){
         mi = j;
         for(i = j+1; i < n; i++){
@@ -29,10 +28,7 @@ void selectionSort(int a[], int n)
             }
         }
         swap(a[j], a[mi]);
-        //display(a, n);
     }
-    cout<<"After selection sort: ";
-    display(a,n);
 } 
 
 
@@ -80,16 +76,12 @@ void swap(int &a,int &b){
 }
 
 void bubbleSort(int a[],int n){
-    //cout<<"Before bubble sort: ";
-    int i,j;
-    int sorted;
-    for(i=0;i<n;i++){
-    	for(int j = 0; j < i; j++){
-          if(a[i] < a[j]){
-              swap(a[i], a[j]);
-          }
-      }
+    for(int i = 0; i < n-1; ++i){
+        for(int j = 0; j < n-1-i; ++j){
+            if(a[j] > a[j+1]){
+                swap(a[j], a[j+1]);
+            }
+        }
     }
-    //cout<<"After bubble sort: ";
 }
 #endif
