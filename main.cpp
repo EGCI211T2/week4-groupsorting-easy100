@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
         a[i] = atoi(argv[i+2]);
     }
 
-    display(a, N);
+    
 
     if(strcmp(argv[1], "bubble") == 0){
         bubbleSort(a, N);
@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    display(a, N);
+    
 
     delete[] a;
     return 0;

@@ -22,12 +22,13 @@ void selectionSort(int a[], int n)
     for(int j = 0; j < n-1; j++){
         mi = j;
         for(i = j+1; i < n; i++){
-            if(a[mi] > a[i]){
+            if(a[mi] < a[i]){
                 mi = i;
             }
         }
         swap(a[j], a[mi]);
         display(a, n);
+        cout << endl;
     }
 } 
 
@@ -57,12 +58,14 @@ void insertion(int arr[], int n)
         int key = arr[i];
         int j = i - 1;
 
-        while (j >= 0 && arr[j] > key) {
+        while (j >= 0 && arr[j] < key) {
             arr[j + 1] = arr[j];
             j = j - 1;
+            display(arr, n);
         }
         arr[j + 1] = key;
         display(arr, n);
+        cout << endl;
     }
 }
 
@@ -76,12 +79,12 @@ void swap(int &a,int &b){
 void bubbleSort(int a[],int n){
     for(int i = 0; i < n-1; ++i){
         for(int j = 0; j < n-1-i; ++j){
-            if(a[j] > a[j+1]){
+            if(a[j] < a[j+1]){
                 swap(a[j], a[j+1]);
+                display(a, n);
             }
         }
-        display(a, n);
-    
+        cout << endl;
     }
 }
 #endif
